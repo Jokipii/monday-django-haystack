@@ -1,0 +1,27 @@
+{
+  "name": "sqmk-elasticsearch",
+  "version": "0.0.1",
+  "source": "UNKNOWN",
+  "author": "Michael K. Squires",
+  "license": "BSD",
+  "summary": "Install and manage ElasticSearch.",
+  "description": "Install and manage ElasticSearch.",
+  "project_page": "https://github.com/sqmk/puppet-elasticsearch",
+  "dependencies": [
+    {
+      "name": "maestrodev/wget"
+    },
+    {
+      "name": "puppetlabs/java"
+    }
+  ],
+  "types": [
+
+  ],
+  "checksums": {
+    "LICENSE": "b5b8482aa6781f65d9908165aa7f6bb6",
+    "Modulefile": "b767110e331e18e76843bb456a7e8ecf",
+    "README.md": "55818b520b84d3275bd2bf31cb5a7ea8",
+    "manifests/init.pp": "ea7012b64a1eb61c84c8cc0887d27485"
+  }
+}
