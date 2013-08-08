@@ -1,0 +1,6 @@
+django-haystack==2.1.0
+Django==1.5.1
+gunicorn==17.5
+psycopg2==2.5.1
+South==0.8.1
+tweepy==2.1

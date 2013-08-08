@@ -1,4 +1,7 @@
 # Django settings for search project.
+import os
+
+ROOT = os.path.abspath('.')
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -103,7 +106,7 @@ ROOT_URLCONF = 'search.urls'
 WSGI_APPLICATION = 'search.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    os.path.join(ROOT, 'templates'),
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )

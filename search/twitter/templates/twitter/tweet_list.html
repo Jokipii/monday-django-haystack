@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="" method="get" accept-charset="utf-8">
+	<input type="text" name="search" id="search" />
+
+	<input type="submit" name="submit" id="submit" value="search" />
+</form>
+
+{% for obj in object_list %}
+<dl>
+	<dt><b>name</b><dt>
+	<dd>{% firstof obj.name 'None' %} </dd>
+	<dt><b>location name</b></dt>
+	<dd>{{obj.location_name}}</dd>
+	<dt><b>country</b></dt>
+	<dd>{{obj.country}}</dd>
+	<dt><b>text</b></dt>
+	<dd>{{obj.text}}</dd>
+	<dt><b>picture url</b></dt>
+	<dd>{{obj.profile_picture_url}}</dd>
+</dl>
+<hr/>
+{% empty %}
+No results
+{% endfor %}
+
+{% endblock %}
