@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, guest: 9200, host: 9200
 
   config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "1024"]
+    vb.customize ["modifyvm", :id, "--memory", "4096"]
   end
 
   config.vm.provision :shell, :inline => "sudo apt-get -q update && sudo apt-get install -y puppet"
