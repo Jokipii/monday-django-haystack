@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+{% load twitter_profanity %}
 <form action="" method="get" accept-charset="utf-8">
 	<input type="text" name="search" id="search" />
 
@@ -12,12 +12,14 @@
 <dl>
 	<dt><b>name</b><dt>
 	<dd>{% firstof obj.name 'None' %} </dd>
+	<dt><b>author</b><dt>
+        <dd>{{ object.author }} </dd>
 	<dt><b>location name</b></dt>
 	<dd>{{obj.location_name}}</dd>
 	<dt><b>country</b></dt>
 	<dd>{{obj.country}}</dd>
 	<dt><b>text</b></dt>
-	<dd>{{obj.text}}</dd>
+        <dd>{{obj.text|twitter_profanity_filter}}</dd>
 	<dt><b>picture url</b></dt>
 	<dd>{{obj.profile_picture_url}}</dd>
 </dl>

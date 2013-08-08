@@ -11,5 +11,10 @@ class TweetAdmin(admin.ModelAdmin):
     list_filter = ('created_at', 'country')
 
 
-admin.site.register(Author)
+class AuthorAdmin(admin.ModelAdmin):
+    model = Author
+    list_display = ('name', 'twitter_id', 'profile_image_url',)
+
+
+admin.site.register(Author, AuthorAdmin)
 admin.site.register(Tweet, TweetAdmin)

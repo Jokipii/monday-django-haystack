@@ -28,17 +28,15 @@ class CustomStreamListener(tweepy.StreamListener):
     def on_status(self, status):
         try:
             #print(status
-            if status.place:
-                print("\t" + str(dir(status.place)))
-                print("\t" + str(status.place.bounding_box))
-                print("\t" + str(status.place.full_name))
-                print("\t" + str(status.place.country))
+            print("\t" + str(status.text))
+            print("\t" + str(status.author.name))
 
             #not all have this???
             #print("\t" + str(status.possibly_sensitive))
             author, created = Author.objects.get_or_create(
                 twitter_id=status.author.id,
                 defaults = {
+                    'name':status.author.name,
                     'statuses_count':status.author.statuses_count,
                     'followers_count':status.author.followers_count,
                     'profile_image_url':status.author.profile_image_url,
