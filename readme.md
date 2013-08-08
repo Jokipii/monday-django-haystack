@@ -17,7 +17,7 @@ Make sure its working:
 
 ```bash
 $ vagrant up
-...
+
 $ curl localhost:9200/_cluster/nodes/_local
 
 $ curl -XGET 'localhost:9200/test/_analyze?text=this+is+a+test'
@@ -37,4 +37,4 @@ $ python manage.py syncdb
 $ python manage.py migrate
 $ python manage.py load_tweets #run this for a few minutes and ctrl-c to stop
 $ python manage.py runserver
-'''
+```
